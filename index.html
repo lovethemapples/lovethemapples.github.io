@@ -15,28 +15,16 @@
 
 <body>
 
-			<span class="timeText">jQuery</span>
-
-			<div id="circle"></div>
-
+			<span class="timeText">AJAX</span>
 			
 
 			<script>
 
-				$("#circle").click(function() {
+				$.get("test.html", function(data){
 
-					$(this).animate({
-
-						width:"300px",
-						height:"300px",
-						borderRadius:"300px",
-						marginLeft: "100px",
-						marginTop: "100px"
-
-					}, 800);
+					alert(data);
 
 				});
-
 				
 			
 			</script>
