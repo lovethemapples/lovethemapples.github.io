@@ -15,7 +15,7 @@
 
 <body>
 
-			<span class="timeText">AJAX</span>
+			<h1>AJAX</h1>
 			
 
 			<script>
@@ -24,7 +24,7 @@
 					url:"test.html"
 				}).done(function(data){
 
-					$("#timeText").html("data");
+					$("h1").html(data);
 
 				});
 			
