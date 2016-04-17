@@ -10,5 +10,105 @@
 	background-color: red;
 	width: 200px;
 	height: 200px;
-	margin: 10px;
+}
+
+#error{
+	margin: 0 auto; 
+	width: 500px;
+	height: 45px;
+	font-family: Helvetica;
+	font-size: 16px;
+	padding: 5px;
+	color:red;
+	margin-top: 20px;
+}
+
+#wrapper {
+    margin: 0 auto; 
+	width: 500px;
+	height: 250px;
+	border-radius: 5px;
+	border:1px solid black;
+	font-family: Helvetica;
+	font-size: 16px;
+	padding: 5px;
+	border-color: #B5B5B5;
+}
+
+.formInput {
+	width: 200px;
+	padding: 10px;
+	border-width: 0px 0px 1px 0px;
+	border-style: dashed;
+	border-color: #B5B5B5;
+	font-family: Helvetica;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+label {
+	float: left;
+	padding: 10px;
+	vertical-align: middle;
+	font-family: Helvetica;
+	font-weight: 300;
+	font-size: 16px;
+	color: #00A8A0;
+	width:200px;
+	text-align: left;
+	}
+
+h1 {
+	font-family: Helvetica;
+	font-weight: 100;
+	font-size: 24px;
+	text-align: center;
+}
+
+h2 {
+	font-family: Helvetica;
+	font-weight: 300;
+	font-size: 20px;
+	text-align: left;
+}
+
+#submit {
+	background-color: #00A8A0;
+	font-family: Helvetica;
+	font-weight: 300;
+	font-size: 16px;
+	color: white;
+	height: 40px;
+	width: 85px;
+	border-width: 0px;
+	margin-left:200px;
+	margin-top: 20px;
+}
+
+#submit:hover{
+	background-color: gray;
+}
+
+#submit:active{
+	background-color: blue;
+}
+
+#sucess{
+	margin: 0 auto; 
+	width: 500px;
+	height: 25px;
+	font-family: Helvetica;
+	font-size: 16px;
+	padding: 5px;
+	color: gray;
+	margin-top: 20px;
+	float: center;
+}
+
+.containerUI {
+	border:1px solid black;
+	border-radius: 5px;
+	width: 500px;
+	height:300px;
+	padding: 10px
 }
