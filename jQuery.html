@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+	
+	<title>Learning jQuery</title>
+		
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+
+
+</head>
+
+<body>
+			<h1>jQuery UI</h1>
+
+			<div class="containerUI">
+				<h2> Draggable</h2>
+				<div class="square">drag me around</div>
+			</div>
+			
+			<div class="containerUI">
+				<h2> Resize</h2>
+				<div class="resizable">resize</div>
+			</div>
+			
+
+			<div class="containerUI">
+				<h2> Drop</h2>
+				<div class="droppable"></div>
+				<div class="target">DROP IT LIKE IT'S HOT</div>
+			</div>
+			
+			<div class="containerUI">
+				<div id="accordion">
+					<h3> Accordions and Sortables!</h3>
+					<p>Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text.</p>
+					<h2> Accordions and Sortables!</h2>
+					<p>Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text.</p>
+					<h2> Accordions and Sortables!</h2>
+					<p>Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text. Here is some text.</p>
+				</div>
+			</div>
+			<div class="containerUI">
+				<h2>Sortable List</h2>
+					<ul>
+						<li>Pizza</li>
+						<li>Chocolate</li>
+						<li>Tacos</li>
+						<li>Popcorn</li>
+						<li>Nachos</li>
+					</ul>
+				</div>
+
+
+			<script>
+				
+				$(".square").draggable();
+				$(".resizable").resizable();
+				$(".droppable").draggable();
+				$(".target").droppable({
+					drop: function(ui, event){
+
+						$(".target").css("backgroundColor", "red")\453s3
+
+				$("#accordion").accordion();
+				$("ul").sortable();
+			
+			</script>
+
+		
+
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+	
+	<title>Code Player</title>
+		
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="codePlayer-style.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+	
+	<div id="menubar">
+
+		<div id="logo">
+			
+			CodePlayer
+		
+		</div>
+
+		<div id="buttonDiv">
+
+			<button id="runButton">Run</button>
+
+		</div>
+		
+		<ul id="toggles">
+			
+			<li class="toggle selected">HTML</li>
+			<li class="toggle">CSS</li>
+			<li class="toggle">JS</li>
+			<li class="toggle selected" style="border:none;">Result</li>
+		
+		</ul>
+
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="codeContainer" id="HTMLContainer">
+		
+		<div class="codeLabel">HTML</div>
+		
+		<textarea id="htmlCode"><div id="test"></div></textarea>
+
+	</div>
+
+	<div class="codeContainer" id="CSSContainer">
+		
+		<div class="codeLabel">CSS</div>
+		
+		<textarea id="cssCode">html {background-color:blue;}</textarea>
+
+	</div>
+
+	<div class="codeContainer" id="JSContainer">
+		
+		<div class="codeLabel">JS</div>
+		
+		<textarea id="jsCode">document.getElementById("test").innerHTML="Its working!";</textarea>
+
+	</div>
+
+	<div class="codeContainer" id="ResultContainer">
+		
+		<div class="codeLabel">Result</div>
+		
+		<iframe id="resultFrame"></iframe>
+
+	</div>
+
+</div>
+
+	<script>
+		
+		var windowHeight=$(window).height();
+		var menuBarHeight=$("#menubar").height();
+		var codeContainerHeight=windowHeight-menuBarHeight;
+
+		$(".codeContainer").height(codeContainerHeight+"px");
+
+		$(".toggle").click(function(){
+
+			$(this).toggleClass("selected");
+
+			var activeDiv=$(this).html();
+
+			$("#"+ activeDiv + "Container").toggle();
+
+			var showingDiv=$(".codeContainer").filter(function(){
+
+				return($(this).css("display")!="none");
+
+			}).length;
+
+			var width=100/showingDiv;
+
+			$(".codeContainer").width(width+"%");
+
+		});
+
+		$("#runButton").click(function(){
+
+			$("iframe").contents().find("html").html('<style>'+$("#cssCode").val()+'</style>'+$("#htmlCode").val());
+	
+		});
+
+		// document.getElementById("resultFrame").contentWindow.eval($("#jsCode").val());
+	
+	</script>
+
+		
+
+
+</body>
+</html>
