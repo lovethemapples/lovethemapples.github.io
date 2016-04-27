@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,24 +20,28 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar-collapse">
 
-<!-- Nav bar Start -->
-    <div class="navbar navbar-default navText">
+    <!-- Nav bar Start -->
+    <div class="navbar navbar-default navbar-fixed-top navText">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <img alt="Brand" src="images/logo.png" id="logo">
-          </a>
+          <!-- for mobile menu -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
-          <span class="sr-only">Toggle Navigation</span>
+              <!-- screen reader only -->
+              <span class="sr-only">Toggle Navigation</span>
 
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
 
           </button>
+
+          <!-- brand image -->
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="css/images/logo.png" id="logo">
+          </a>
 
         </div>
 
@@ -44,11 +49,129 @@
 
           <ul class="nav navbar-nav">
 
-            <li class="active"><a href="">ABOUT</a></li>
-            <li><a href="">PORTFOLIO</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li class="active"><a href="#section2">ABOUT</a></li>
+            <li><a href="#section3">PORTFOLIO</a></li>
+            <li><a href="#section4">CONTACT</a></li>
 
           </ul>
+
+          <!-- login form -->
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+                <input type="email" placeholder="client@email.com" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="password" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success">Log In</button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+    <!-- Nav Bar end -->
+
+    <!-- Main content Start -->
+    <div class="container contentContainer" id="topContainer">
+
+      <div class="row" id="topRow">
+
+
+          <div class="logoImage">
+
+
+
+          </div>
+
+
+
+      </div>
+
+    </div>
+
+
+<!-- Section 2 -->
+    <div class="container contentContainer" id="section2">
+
+      <div class="row center">
+        <h1 class="center title">About Me</h1>
+        <p class="lead center">A little bit about me.</p>
+      </div>
+
+      <div class="row center marginBottom">
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-tasks largeIcon" aria-hidden="true"></span>
+          <h3>Skills</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-briefcase largeIcon" aria-hidden="true"></span>
+          <h3>Experience</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="glyphicon glyphicon-education largeIcon" aria-hidden="true"></span>
+          <h3>Education</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+        </div>
+      </div>
+
+    </div>
+<!-- End of Section 2 -->
+
+  <!-- Section 3 -->
+  <div class="container contentContainer" id="section3">
+  </div>
+  <!-- End of Section 3 -->
+
+<!-- Section 4 -->
+    <div class="container contentContainer" id="section4">
+
+      <div class="row">
+        <div class="col-md-7">
+          <p class="bold marginTop">Contact Me</p>
+
+          <form class="marginTop">
+
+            <div class="form-group">
+
+              <input type="text" class="form-control" name="name" placeholder="name"/>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <input type="email" class="form-control" name="email" placeholder="email"/>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <input type="text" class="form-control" name="message" placeholder="message"/>
+
+            </div>
+
+            <input type="submit" class="btn btn-success btn marginTop center" />
+
+          </form>
+
+        </div>
+
+        <div class="col-md-5">
+
+          <h1 class="bold marginTop">Interested? Follow me!</h1>
+            <i class="fa fa-twitter fa-2x socialIcon"></i>
+            <i class="fa fa-instagram fa-2x socialIcon"></i>
+            <i class="fa fa-github fa-2x socialIcon"></i>
+            <i class="fa fa-behance fa-2x socialIcon"></i>
+            <i class="fa fa-linkedin fa-2x socialIcon"></i>
+
 
         </div>
 
@@ -56,17 +179,18 @@
 
     </div>
 
-    <!-- Nav Bar end -->
-
-    <!-- Main content Start -->
-    <div class="container">
-    </div>
-    <!-- Main content end -->
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+    $(".contentContainer").css("min-height",$(window).height());
+
+    </script>
+
+
   </body>
 </html>
